@@ -1,0 +1,14 @@
+{% block content %}
+<h1> Welcome to  Qis Login page</h1>
+{% comment %}<!--<form method="post" action="{% url 'welcome' %}">-->{% endcomment %}
+<form method="post" action="{% url 'qispage' %}">
+  {% csrf_token %}
+  {{ form.as_p }}<br>
+  <button type="submit">Submit</button>
+</form><br>
+
+
+
+
+
+{%  endblock %}

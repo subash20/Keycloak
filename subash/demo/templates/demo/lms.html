@@ -1,0 +1,41 @@
+
+{% block content %}
+<!--<a href="{% url 'page' %}">Click here to login LMS page</a>-->
+<p1> Welcome to Lms Page </p1>
+<!--<head>
+<form method="post" action="{% url 'page' %}">
+       {% csrf_token %}
+       <button type="Submit"> Submit </button>
+      <script src="http://localhost:8080/auth/js/keycloak.js"></script>
+      <script>
+        var keycloak = Keycloak({url: 'http://localhost:8080/auth',
+        realm: 'Lms',
+        clientId: 'qis'});
+        	keycloak.init({ onLoad: 'login-required' })
+            keycloak.login({redirectUri: ''})
+
+
+      </script>
+
+</form>
+
+</head>-->
+<script src="http://localhost:8080/auth/js/keycloak.js"></script>
+      <script>
+        var keycloak = Keycloak({url: 'http://localhost:8080/auth',
+        realm: 'Lms',
+        clientId: 'qis'});
+        	keycloak.init({ onLoad: 'login-required' });
+        	keycloak.onAuthSuccess = function() { alert('authenticated'); }
+
+  /*          keycloak.loadUserProfile().success(function(profile) {
+        alert(JSON.stringify(test, null, "  "));
+    }).error(function() {
+        alert('Failed to load user profile');
+    });*/
+           /* keycloak.login({redirectUri: 'http://localhost:8000/demo/page})*/;
+
+
+      </script>
+
+{% endblock %}

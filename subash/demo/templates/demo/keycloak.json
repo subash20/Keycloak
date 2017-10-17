@@ -1,0 +1,8 @@
+{
+  "realm": "Lms",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "qis",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}
